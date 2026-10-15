@@ -6,6 +6,7 @@
   <meta name="description" content="美容室向けホームページの架空制作サンプル" />
   <title>hair salon nagi｜制作サンプル</title>
   <link rel="stylesheet" href="../sample-shared.css" />
+  <script src="../sample-interactions.js" defer></script>
 </head>
 <body class="salon">
   <div class="sample-notice"><b>架空店舗の制作サンプルです</b><span>店舗名・人物・住所・価格はデモ用です</span><a href="../../#samples">サービスサイトへ戻る</a></div>
@@ -19,8 +20,8 @@
     <section class="salon-concept" id="concept"><small>OUR APPROACH</small><h2>最初に、普段のことをお聞きします。</h2><p>朝のスタイリングにかけられる時間、髪のお悩み、よく着る服。カウンセリングで日常のことを伺ってから、その方に合う長さや形をご提案します。</p></section>
 
     <section class="salon-gallery sample-photo-pair" aria-label="施術とカウンセリングの写真">
-      <figure><img src="../../assets/gallery/salon-service.jpg" alt="明るい美容室でスタイリストが髪を乾かしている様子" /><figcaption>施術の時間</figcaption></figure>
-      <figure><img src="../../assets/gallery/salon-people.jpg" alt="鏡の前でスタイリストとお客さまが話している様子" /><figcaption>仕上がりを一緒に確認</figcaption></figure>
+      <button class="photo-open" type="button" data-lightbox aria-label="施術の時間の写真を拡大する"><img src="../../assets/gallery/salon-service.jpg" alt="明るい美容室でスタイリストが髪を乾かしている様子" /><span class="photo-caption">施術の時間</span><span class="photo-zoom" aria-hidden="true">拡大 ↗</span></button>
+      <button class="photo-open" type="button" data-lightbox aria-label="仕上がりを確認する写真を拡大する"><img src="../../assets/gallery/salon-people.jpg" alt="鏡の前でスタイリストとお客さまが話している様子" /><span class="photo-caption">仕上がりを一緒に確認</span><span class="photo-zoom" aria-hidden="true">拡大 ↗</span></button>
     </section>
 
     <section class="salon-menu" id="menu">

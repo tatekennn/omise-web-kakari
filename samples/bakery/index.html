@@ -6,6 +6,7 @@
   <meta name="description" content="パン屋向けホームページの架空制作サンプル" />
   <title>日々ベーカリー｜制作サンプル</title>
   <link rel="stylesheet" href="../sample-shared.css" />
+  <script src="../sample-interactions.js" defer></script>
 </head>
 <body class="bakery">
   <div class="sample-notice"><b>架空店舗の制作サンプルです</b><span>店舗名・住所・商品・価格はデモ用です</span><a href="../../#samples">サービスサイトへ戻る</a></div>
@@ -20,8 +21,8 @@
     <section class="bakery-about" id="about"><div class="number">01</div><div><h2>毎日食べたくなる、飽きないパンを。</h2><p>日々ベーカリーは、住宅街にある小さなパン屋です。国産小麦と自家製酵母を使い、食パン、塩パン、季節のデニッシュを店内で焼いています。</p><p>商品は一度にたくさん作らず、朝から数回に分けて焼き上げます。お目当ての商品がある場合は、お電話で取り置きを承ります。</p></div></section>
 
     <section class="bakery-gallery sample-photo-pair" aria-label="パンの写真">
-      <figure><img src="../../assets/gallery/bakery-pastries.jpg" alt="ショーケースに並んだ焼き色のよいクロワッサン" /><figcaption>朝に焼き上がるクロワッサン</figcaption></figure>
-      <figure><img src="../../assets/gallery/bakery-loaves.jpg" alt="木の台に並べられた丸いパンと食事パン" /><figcaption>食事に合わせやすいパン</figcaption></figure>
+      <button class="photo-open" type="button" data-lightbox aria-label="クロワッサンの写真を拡大する"><img src="../../assets/gallery/bakery-pastries.jpg" alt="ショーケースに並んだ焼き色のよいクロワッサン" /><span class="photo-caption">朝に焼き上がるクロワッサン</span><span class="photo-zoom" aria-hidden="true">拡大 ↗</span></button>
+      <button class="photo-open" type="button" data-lightbox aria-label="食事パンの写真を拡大する"><img src="../../assets/gallery/bakery-loaves.jpg" alt="木の台に並べられた丸いパンと食事パン" /><span class="photo-caption">食事に合わせやすいパン</span><span class="photo-zoom" aria-hidden="true">拡大 ↗</span></button>
     </section>
 
     <section class="bakery-products" id="bread">

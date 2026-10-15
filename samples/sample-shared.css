@@ -11,23 +11,41 @@
 .cafe,.salon,.bakery{line-break:strict;word-break:normal;overflow-wrap:anywhere}
 h1,h2,h3{text-wrap:balance}p,figcaption,dd{text-wrap:pretty}
 .sample-photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:1120px;margin:0 auto;padding:0 30px 120px}
-.sample-photo-pair figure{position:relative;margin:0;overflow:hidden}
-.sample-photo-pair img{height:520px}
-.sample-photo-pair figcaption{position:absolute;left:18px;bottom:18px;padding:8px 12px;background:rgba(20,20,18,.78);color:#fff;font-size:10px;letter-spacing:.06em}
-.cafe-gallery figure:first-child{margin-top:70px}.cafe-gallery img{filter:saturate(.72)}
-.salon-gallery{gap:42px}.salon-gallery figure:last-child{margin-top:90px}.salon-gallery img{filter:saturate(.58)}
+.photo-open{position:relative;margin:0;padding:0;overflow:hidden;border:0;background:transparent;color:inherit;text-align:inherit;cursor:zoom-in}
+.sample-photo-pair img{height:520px;transition:transform .35s ease,filter .35s ease}
+.photo-open:hover img{transform:scale(1.018)}
+.photo-open:focus-visible{outline:4px solid currentColor;outline-offset:5px}
+.photo-caption{position:absolute;left:18px;bottom:18px;padding:8px 12px;background:rgba(20,20,18,.78);color:#fff;font-size:10px;letter-spacing:.06em}
+.photo-zoom{position:absolute;right:18px;top:18px;padding:7px 10px;background:rgba(255,255,255,.9);color:#191b19;font-size:9px;font-weight:700;letter-spacing:.04em;opacity:0;transform:translateY(-5px);transition:.2s}
+.photo-open:hover .photo-zoom,.photo-open:focus-visible .photo-zoom{opacity:1;transform:none}
+.cafe-gallery .photo-open:first-child{margin-top:70px}.cafe-gallery img{filter:saturate(.72)}
+.salon-gallery{gap:42px}.salon-gallery .photo-open:last-child{margin-top:90px}.salon-gallery img{filter:saturate(.58)}
 .bakery-gallery{gap:0;padding-left:0;padding-right:0;max-width:none;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
-.bakery-gallery figure{border-right:2px solid var(--ink)}.bakery-gallery figure:last-child{border-right:0}.bakery-gallery img{height:470px}
+.bakery-gallery .photo-open{border-right:2px solid var(--ink)}.bakery-gallery .photo-open:last-child{border-right:0}.bakery-gallery img{height:470px}
 .salon-inline-link{width:fit-content;margin-top:20px;padding-bottom:4px;border-bottom:1px solid;text-decoration:none;font-size:10px;letter-spacing:.08em}
 .cafe-map span{width:auto;height:auto;min-width:58px;min-height:58px;padding:14px 18px;text-align:center}
 .week span{grid-template-rows:auto auto;align-content:center;gap:3px}.week span small{font-size:8px}
 .bread-shape{position:relative;filter:none}.bread-shape:before{content:"";display:block;width:82px;height:58px;border:2px solid var(--ink);background:var(--yellow)}
 .bread-one:before{border-radius:42% 42% 14% 14%}.bread-two:before{width:78px;height:45px;border-radius:50%;transform:rotate(-7deg);background:#e3a62f}.bread-three:before{width:88px;height:62px;border-radius:50% 50% 35% 35%;background:#a96d38}.bread-four:before{width:65px;height:65px;border-radius:50%;background:#df8f56}
+body.lightbox-open{overflow:hidden}
+.photo-lightbox{width:100%;max-width:none;height:100%;max-height:none;margin:0;padding:0;border:0;background:rgba(9,12,10,.94);color:#fff}
+.photo-lightbox::backdrop{background:rgba(9,12,10,.94)}
+.lightbox-panel{position:relative;display:grid;grid-template-columns:64px minmax(0,1fr) 64px;align-items:center;width:100%;height:100%;padding:70px clamp(16px,5vw,72px) 35px}
+.photo-lightbox figure{display:flex;min-width:0;height:100%;margin:0;flex-direction:column;align-items:center;justify-content:center;gap:14px}
+.photo-lightbox img{width:auto;max-width:100%;height:auto;max-height:calc(100vh - 155px);object-fit:contain}
+.photo-lightbox figcaption{font-size:12px;letter-spacing:.08em}
+.lightbox-close,.lightbox-nav{border:1px solid rgba(255,255,255,.5);background:rgba(10,13,11,.55);color:#fff;cursor:pointer}
+.lightbox-close{position:absolute;z-index:2;top:18px;right:20px;min-width:84px;min-height:44px;padding:8px 14px;border-radius:999px;font-size:11px}
+.lightbox-nav{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;font-size:21px}
+.lightbox-prev{justify-self:start}.lightbox-next{justify-self:end}
+.lightbox-count{position:absolute;left:50%;bottom:13px;margin:0;transform:translateX(-50%);font:11px/1.4 sans-serif;letter-spacing:.12em}
 @media(max-width:760px){
   .sample-photo-pair{grid-template-columns:1fr;padding:0 20px 85px;gap:14px}
-  .sample-photo-pair figure,.cafe-gallery figure:first-child,.salon-gallery figure:last-child{margin-top:0}
+  .photo-open,.cafe-gallery .photo-open:first-child,.salon-gallery .photo-open:last-child{margin-top:0}
+  .photo-zoom{display:none}
   .sample-photo-pair img,.bakery-gallery img{height:390px}
-  .bakery-gallery{padding-left:0;padding-right:0;gap:0}.bakery-gallery figure{border-right:0;border-bottom:2px solid var(--ink)}.bakery-gallery figure:last-child{border-bottom:0}
+  .bakery-gallery{padding-left:0;padding-right:0;gap:0}.bakery-gallery .photo-open{border-right:0;border-bottom:2px solid var(--ink)}.bakery-gallery .photo-open:last-child{border-bottom:0}
+  .lightbox-panel{grid-template-columns:44px minmax(0,1fr) 44px;padding:66px 8px 36px}.lightbox-nav{width:42px;height:42px}.photo-lightbox img{max-height:calc(100vh - 145px)}
   .cafe-copy h1,.bakery-copy h1{font-size:clamp(39px,12vw,52px);line-height:1.45}
   .salon-copy h1 span{font-size:21px}.salon-concept h2{font-size:32px}
   .cafe-story h2,.bakery-about h2,.salon-staff-copy h2{font-size:clamp(30px,9vw,39px)}

@@ -6,6 +6,7 @@
   <meta name="description" content="喫茶店向けホームページの架空制作サンプル" />
   <title>喫茶 こもれび｜制作サンプル</title>
   <link rel="stylesheet" href="../sample-shared.css" />
+  <script src="../sample-interactions.js" defer></script>
 </head>
 <body class="cafe">
   <div class="sample-notice"><b>架空店舗の制作サンプルです</b><span>店舗名・住所・商品・価格はデモ用です</span><a href="../../#samples">サービスサイトへ戻る</a></div>
@@ -27,8 +28,8 @@
     </section>
 
     <section class="cafe-gallery sample-photo-pair" id="gallery" aria-label="店内とメニューの写真">
-      <figure><img src="../../assets/gallery/cafe-table.jpg" alt="木のテーブルに置かれたアイスカフェオレと焼き菓子" /><figcaption>飲みものと季節のお菓子</figcaption></figure>
-      <figure><img src="../../assets/gallery/cafe-cake.jpg" alt="明るい窓辺の席に置かれた珈琲とケーキ" /><figcaption>窓辺のテーブル席</figcaption></figure>
+      <button class="photo-open" type="button" data-lightbox aria-label="飲みものと季節のお菓子の写真を拡大する"><img src="../../assets/gallery/cafe-table.jpg" alt="木のテーブルに置かれたアイスカフェオレと焼き菓子" /><span class="photo-caption">飲みものと季節のお菓子</span><span class="photo-zoom" aria-hidden="true">拡大 ↗</span></button>
+      <button class="photo-open" type="button" data-lightbox aria-label="窓辺のテーブル席の写真を拡大する"><img src="../../assets/gallery/cafe-cake.jpg" alt="明るい窓辺の席に置かれた珈琲とケーキ" /><span class="photo-caption">窓辺のテーブル席</span><span class="photo-zoom" aria-hidden="true">拡大 ↗</span></button>
     </section>
 
     <section class="cafe-menu" id="menu">
