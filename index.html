@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="南大沢・多摩エリアの小さなお店向けホームページ制作。初期費用を抑えた月額制で、制作・公開・更新までわかりやすくサポートします。" />
-  <meta name="theme-color" content="#f4f0e6" />
-  <meta property="og:title" content="tateken web｜地域のお店のホームページ制作" />
-  <meta property="og:description" content="お店らしさが、きちんと伝わるホームページを。南大沢・多摩エリアから、小さなお店の発信をお手伝いします。" />
+  <meta name="description" content="南大沢・多摩エリアのお店のホームページ制作・更新サポート。お店の外部Web担当として、伝わるサイトをつくり、公開後も育てます。" />
+  <meta name="theme-color" content="#f5f0e7" />
+  <meta property="og:title" content="おみせのWeb係｜ホームページ制作・更新サポート" />
+  <meta property="og:description" content="つくるだけでなく、公開後も。地域のお店の外部Web担当として、ホームページを支えます。" />
   <meta property="og:type" content="website" />
-  <title>tateken web｜南大沢・多摩のお店向けホームページ制作</title>
+  <title>おみせのWeb係｜地域のお店のホームページ制作・更新サポート</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="./styles.css" />
   <script src="./script.js" defer></script>
@@ -17,223 +17,204 @@
   <a class="skip-link" href="#main">本文へ移動</a>
 
   <header class="site-header" data-header>
-    <a class="brand" href="#top" aria-label="tateken web ホーム">
-      <span class="brand-mark" aria-hidden="true">t</span>
-      <span>tateken web</span>
+    <a class="brand" href="#top" aria-label="おみせのWeb係 ホーム">
+      <span class="brand-symbol" aria-hidden="true">係</span>
+      <span class="brand-name">おみせのWeb係<small>ホームページ制作・更新サポート</small></span>
     </a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="global-nav" data-menu-button>
-      <span></span><span></span><span></span>
-      <span class="sr-only">メニューを開く</span>
+      <span></span><span></span><span></span><b class="sr-only">メニューを開く</b>
     </button>
     <nav id="global-nav" class="global-nav" aria-label="メインメニュー" data-nav>
-      <a href="#service">できること</a>
-      <a href="#works">制作サンプル</a>
+      <a href="#about">できること</a>
+      <a href="#samples">参考サイト</a>
       <a href="#price">料金</a>
       <a href="#faq">よくある質問</a>
-      <a class="nav-cta" href="#contact">無料で相談する</a>
+      <a class="nav-contact" href="#contact">無料相談</a>
     </nav>
   </header>
 
   <main id="main">
     <section class="hero" id="top">
       <div class="hero-copy">
-        <p class="eyebrow">MINAMI-OSAWA / TAMA, TOKYO</p>
-        <h1>お店らしさが、<br /><em>きちんと伝わる。</em></h1>
-        <p class="hero-lead">Instagramだけでは伝えきれない、メニュー、こだわり、アクセス。小さなお店のためのホームページを、制作から更新までわかりやすく支えます。</p>
+        <p class="eyebrow">FOR LOCAL SHOPS IN TAMA</p>
+        <h1>お店のWeb、<br /><em>まるごと係になります。</em></h1>
+        <p class="hero-lead">ホームページをつくる人ではなく、<br class="desktop-only" />困ったときに相談できる「外部のWeb担当者」へ。</p>
+        <p class="hero-body">Instagramの投稿に埋もれた営業時間やメニューを整理して、初めてのお客さまにも伝わる場所をつくります。公開後の小さな更新も、まとめてお任せください。</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#contact">まずは無料で相談する</a>
-          <a class="text-link" href="#works">制作サンプルを見る <span aria-hidden="true">↘</span></a>
+          <a class="button button-dark" href="#contact">お店のことを相談する <span>→</span></a>
+          <a class="under-link" href="#samples">まず参考サイトを見る</a>
         </div>
-        <p class="hero-note">相談無料・無理な営業はしません</p>
+        <ul class="hero-assurance" aria-label="相談時の安心事項">
+          <li>相談無料</li><li>デモを見てから判断</li><li>無理な営業なし</li>
+        </ul>
       </div>
 
-      <div class="hero-visual" aria-label="店舗ホームページの制作イメージ">
-        <div class="window">
-          <div class="window-bar"><i></i><i></i><i></i><span>your-shop.jp</span></div>
-          <div class="sample-shop">
-            <div class="sample-nav"><b>喫茶 こもれび</b><span>お品書き　私たちについて　アクセス</span></div>
-            <div class="sample-main">
-              <p>街の余白で、<br />ひと休み。</p>
-              <span>南大沢の小さな喫茶店</span>
-            </div>
-            <div class="sample-info"><span>OPEN</span><b>10:00 — 18:00</b><span>水曜定休</span></div>
+      <div class="hero-stage" aria-label="制作するサイトのイメージ">
+        <span class="stage-label">YOUR WEB DESK</span>
+        <div class="stage-board">
+          <div class="stage-note note-one"><span>更新依頼</span><b>来月の営業日を<br />変えたい</b><i>おまかせください</i></div>
+          <div class="stage-browser">
+            <div class="browser-top"><i></i><i></i><i></i><span>your-shop.jp</span></div>
+            <img src="./assets/sample-cafe.jpg" alt="落ち着いたカフェの店内" />
+            <div class="browser-copy"><small>南大沢の小さな喫茶店</small><b>街の余白で、<br />ひと休み。</b><span>メニューを見る　→</span></div>
           </div>
+          <div class="stage-note note-two"><span>Web係</span><b>営業時間を更新しました</b><i>本日 14:32</i></div>
         </div>
-        <div class="visual-caption"><span>01</span><p>お店ごとの空気感に合わせて、ひとつずつデザインします。</p></div>
+        <p class="stage-caption"><b>つくる</b><span></span><b>整える</b><span></span><b>更新する</b></p>
       </div>
     </section>
 
-    <div class="trust-strip" aria-label="サービスの特徴">
-      <span>初期費用を抑えて</span><i></i><span>スマホ対応</span><i></i><span>公開後も更新をサポート</span>
-    </div>
+    <aside class="promise-bar">
+      <p>小さなお店に必要なのは、難しいシステムではなく、<strong>「ちゃんと見つかり、迷わず来店できる場所」</strong>だと考えます。</p>
+    </aside>
 
-    <section class="section intro" id="service">
-      <div class="section-index">01</div>
-      <div class="section-heading">
-        <p class="eyebrow">WHAT WE DO</p>
-        <h2>SNSの先にある、<br />お店の「案内所」をつくる。</h2>
-      </div>
-      <div class="intro-body">
-        <p class="large-copy">お客さまが知りたいことを、迷わず見つけられる場所に。</p>
-        <p>営業時間やメニューが投稿の中に埋もれていませんか。ホームページがあれば、検索から来た人にも、お店の魅力と必要な情報をすっきり届けられます。</p>
+    <section class="section about" id="about">
+      <div class="section-label"><span>01</span><p>ABOUT THE SERVICE</p></div>
+      <div class="about-heading">
+        <h2>作って終わりにしない。<br />日々の変化まで支えます。</h2>
+        <p>Webの専門知識や管理画面の操作を覚える必要はありません。変えたい内容をメッセージで送っていただければ、こちらで反映します。</p>
       </div>
 
-      <div class="service-list">
+      <div class="service-rail">
         <article>
-          <span>01</span>
-          <h3>お店に合わせた制作</h3>
-          <p>テンプレートに当てはめるだけでなく、雰囲気や客層を見ながら言葉と見せ方を整えます。</p>
+          <span class="service-number">01</span>
+          <div class="service-title"><small>CREATE</small><h3>つくる</h3></div>
+          <p>お店の雰囲気、来てほしいお客さま、伝えるべき情報を整理し、スマートフォンで見やすいホームページにします。</p>
+          <ul><li>文章・構成の整理</li><li>オリジナルデザイン</li><li>スマホ対応</li></ul>
         </article>
         <article>
-          <span>02</span>
-          <h3>スマホで見やすく</h3>
-          <p>移動中に検索するお客さまを想定し、営業時間・地図・連絡先へすぐ辿り着ける設計にします。</p>
+          <span class="service-number">02</span>
+          <div class="service-title"><small>CONNECT</small><h3>つなげる</h3></div>
+          <p>Googleマップ、Instagram、予約サービスなど、すでに使っているものを活かして来店までの迷いを減らします。</p>
+          <ul><li>地図・アクセス</li><li>SNSへの導線</li><li>予約・電話リンク</li></ul>
         </article>
         <article>
-          <span>03</span>
-          <h3>公開後の更新も</h3>
-          <p>文章や写真の差し替え、営業時間の変更など、日々の小さな更新を継続して支えます。</p>
+          <span class="service-number">03</span>
+          <div class="service-title"><small>SUPPORT</small><h3>支える</h3></div>
+          <p>営業時間、写真、メニューなどの変更を継続的に反映。サーバーやセキュリティも管理します。</p>
+          <ul><li>情報の更新</li><li>サーバー管理</li><li>不具合対応</li></ul>
         </article>
       </div>
     </section>
 
-    <section class="section works" id="works">
-      <div class="works-heading">
-        <div>
-          <div class="section-index">02</div>
-          <p class="eyebrow">DESIGN SAMPLES</p>
-          <h2>お店ごとに、<br />似合う伝え方を。</h2>
+    <section class="samples" id="samples">
+      <div class="section samples-intro">
+        <div class="section-label light"><span>02</span><p>LIVE DESIGN SAMPLES</p></div>
+        <div class="samples-heading">
+          <h2>画面ではなく、<br />実際のサイトでご覧ください。</h2>
+          <p>業種ごとに情報の見せ方や空気感を変えています。すべて架空店舗の制作サンプルですが、各サイトを開いてPC・スマートフォンで操作できます。</p>
         </div>
-        <p>以下はデザインの方向性をご覧いただくための架空の制作サンプルです。実在する店舗の制作実績ではありません。</p>
       </div>
 
-      <div class="work-grid">
-        <article class="work-card work-cafe">
-          <div class="work-browser">
-            <div class="mini-bar"></div>
-            <div class="cafe-layout">
-              <small>KOMOREBI COFFEE</small>
-              <strong>静かな午後と、<br />深煎り珈琲。</strong>
-              <span>VIEW MENU</span>
-            </div>
+      <div class="sample-list">
+        <article class="sample-item cafe-item">
+          <a class="sample-image" href="./samples/cafe/" aria-label="喫茶こもれびの参考サイトを開く">
+            <img src="./assets/sample-cafe.jpg" alt="喫茶店向け参考サイトのイメージ" />
+            <span class="sample-open">サイトを見る <b>↗</b></span>
+            <div class="image-site-title"><small>KOMOREBI COFFEE</small><strong>街の余白で、<br />ひと休み。</strong></div>
+          </a>
+          <div class="sample-info">
+            <div><span>SAMPLE 01 / CAFE</span><h3>喫茶 こもれび</h3></div>
+            <p>静けさと温度が伝わる、余白を活かしたカフェサイト。メニュー、店内の過ごし方、アクセスを自然な順番で案内します。</p>
+            <a href="./samples/cafe/">参考サイトを開く <span>→</span></a>
           </div>
-          <div class="work-meta"><div><span>制作サンプル A</span><h3>個人カフェ</h3></div><p>落ち着きと温度感を伝える、余白のある構成。</p></div>
         </article>
 
-        <article class="work-card work-salon">
-          <div class="work-browser">
-            <div class="mini-bar"></div>
-            <div class="salon-layout">
-              <span>hair salon</span>
-              <strong>nagi</strong>
-              <small>毎日に、すこし軽やかな髪を。</small>
-            </div>
+        <article class="sample-item salon-item">
+          <a class="sample-image" href="./samples/salon/" aria-label="ヘアサロンnagiの参考サイトを開く">
+            <img src="./assets/sample-salon.jpg" alt="美容室向け参考サイトのイメージ" />
+            <span class="sample-open">サイトを見る <b>↗</b></span>
+            <div class="image-site-title"><small>HAIR SALON</small><strong>nagi</strong></div>
+          </a>
+          <div class="sample-info">
+            <div><span>SAMPLE 02 / HAIR SALON</span><h3>hair salon nagi</h3></div>
+            <p>清潔感とやわらかさを大切にした美容室サイト。メニューとスタイリスト、予約方法へ短い動線でつなぎます。</p>
+            <a href="./samples/salon/">参考サイトを開く <span>→</span></a>
           </div>
-          <div class="work-meta"><div><span>制作サンプル B</span><h3>美容室</h3></div><p>清潔感と予約までのわかりやすさを重視。</p></div>
         </article>
 
-        <article class="work-card work-food">
-          <div class="work-browser">
-            <div class="mini-bar"></div>
-            <div class="food-layout">
-              <small>BAKED EVERY MORNING</small>
-              <strong>まいにちの、<br />いいパン。</strong>
-              <span>お品書き →</span>
-            </div>
+        <article class="sample-item bakery-item">
+          <a class="sample-image" href="./samples/bakery/" aria-label="日々ベーカリーの参考サイトを開く">
+            <img src="./assets/sample-bakery.jpg" alt="ベーカリー向け参考サイトのイメージ" />
+            <span class="sample-open">サイトを見る <b>↗</b></span>
+            <div class="image-site-title"><small>BAKED EVERY MORNING</small><strong>まいにちの、<br />いいパン。</strong></div>
+          </a>
+          <div class="sample-info">
+            <div><span>SAMPLE 03 / BAKERY</span><h3>日々ベーカリー</h3></div>
+            <p>朝の焼き上がりを感じる、明るく親しみやすいパン屋サイト。定番商品や営業日を見つけやすくまとめています。</p>
+            <a href="./samples/bakery/">参考サイトを開く <span>→</span></a>
           </div>
-          <div class="work-meta"><div><span>制作サンプル C</span><h3>ベーカリー</h3></div><p>商品写真が映え、来店につながる親しみやすい設計。</p></div>
         </article>
+      </div>
+      <p class="sample-disclosure">※ 掲載している店舗名・住所・商品・価格は、デザイン確認用の架空情報です。写真はUnsplashの素材を使用しています。</p>
+    </section>
+
+    <section class="section approach">
+      <div class="section-label"><span>03</span><p>OUR APPROACH</p></div>
+      <div class="approach-grid">
+        <div class="approach-copy">
+          <p class="eyebrow">BEFORE YOU DECIDE</p>
+          <h2>契約の前に、<br />お店のデモを作ります。</h2>
+          <p>完成イメージが分からないまま契約する必要はありません。まず公開情報をもとに1画面のデモをご提案し、方向性に納得いただいてから進めます。</p>
+        </div>
+        <ol>
+          <li><span>01</span><div><h3>お店を知る</h3><p>InstagramやGoogleマップを確認し、魅力と必要な情報を整理します。</p></div></li>
+          <li><span>02</span><div><h3>デモを見る</h3><p>お店に合わせたトップ画面を作成。見た目と考え方をご説明します。</p></div></li>
+          <li><span>03</span><div><h3>納得してから始める</h3><p>内容・料金・更新範囲をご確認いただき、合意後に制作を進めます。</p></div></li>
+        </ol>
       </div>
     </section>
 
-    <section class="section process" id="process">
-      <div class="section-index">03</div>
-      <div class="section-heading">
-        <p class="eyebrow">HOW IT WORKS</p>
-        <h2>はじめてでも、<br />4つの手順で公開。</h2>
+    <section class="pricing" id="price">
+      <div class="section pricing-inner">
+        <div class="section-label"><span>04</span><p>PRICE</p></div>
+        <div class="pricing-heading"><h2>続けやすく、<br />分かりやすい料金に。</h2><p>公開後の管理・更新を含む月額制です。以下はサービス準備中の参考料金で、正式なお見積もりは内容を伺ったうえで提示します。</p></div>
+        <div class="plans">
+          <article>
+            <div class="plan-name"><small>LIGHT</small><h3>ライト</h3><p>必要な情報を1ページに</p></div>
+            <div class="plan-price"><b>4,980</b><span>円／月<br />税込</span></div>
+            <ul><li>1ページ構成</li><li>スマートフォン対応</li><li>サーバー・SSL管理</li><li>月1回の軽微な更新</li><li>Googleマップ・SNS導線</li></ul>
+            <p class="fit">小さく始めたい店舗向け</p>
+          </article>
+          <article class="featured">
+            <span class="featured-label">おすすめ</span>
+            <div class="plan-name"><small>STANDARD</small><h3>スタンダード</h3><p>魅力をしっかり伝える</p></div>
+            <div class="plan-price"><b>9,800</b><span>円／月<br />税込</span></div>
+            <ul><li>最大5ページ</li><li>スマートフォン対応</li><li>サーバー・SSL管理</li><li>月2回の軽微な更新</li><li>Googleマップ・SNS導線</li></ul>
+            <p class="fit">メニューやこだわりも伝えたい店舗向け</p>
+          </article>
+        </div>
+        <p class="price-caution">独自ドメイン、撮影、大幅なページ追加、予約・決済システムなどは別途ご相談となります。最低利用期間・解約方法・サイトとドメインの扱いは、ご契約前に書面でご案内します。</p>
       </div>
-      <ol class="steps">
-        <li><span>1</span><div><h3>無料相談</h3><p>お店のこと、困っていること、載せたい情報を伺います。</p></div></li>
-        <li><span>2</span><div><h3>ご提案・デモ制作</h3><p>内容と見た目の方向性、料金、スケジュールをご説明します。</p></div></li>
-        <li><span>3</span><div><h3>確認・調整</h3><p>文章や写真を確認いただき、必要な修正を行います。</p></div></li>
-        <li><span>4</span><div><h3>公開・運用</h3><p>公開後も、プランの範囲内で更新と管理を続けます。</p></div></li>
-      </ol>
-    </section>
-
-    <section class="section pricing" id="price">
-      <div class="pricing-title">
-        <div class="section-index">04</div>
-        <p class="eyebrow">PRICING</p>
-        <h2>無理なく続けられる、<br />月額制から。</h2>
-        <p>現在はサービス開始前の参考料金です。正式なお見積もりは、掲載内容を伺ったうえでお伝えします。</p>
-      </div>
-
-      <div class="price-table">
-        <article>
-          <div class="plan-head"><span>LIGHT</span><h3>ライト</h3><p><b>4,980</b>円<small>／月（税込）</small></p></div>
-          <ul>
-            <li>1ページのホームページ</li>
-            <li>スマートフォン対応</li>
-            <li>サーバー・SSL管理</li>
-            <li>月1回の軽微な修正</li>
-          </ul>
-          <p class="plan-fit">まずは小さく始めたいお店に</p>
-        </article>
-        <article class="recommended">
-          <div class="recommend-label">おすすめ</div>
-          <div class="plan-head"><span>STANDARD</span><h3>スタンダード</h3><p><b>9,800</b>円<small>／月（税込）</small></p></div>
-          <ul>
-            <li>最大5ページ</li>
-            <li>スマートフォン対応</li>
-            <li>サーバー・SSL管理</li>
-            <li>月2回の軽微な修正</li>
-            <li>Googleマップ・SNS導線</li>
-          </ul>
-          <p class="plan-fit">情報をしっかり届けたいお店に</p>
-        </article>
-      </div>
-      <p class="price-note">※ 独自ドメイン費用、大幅なページ追加、撮影、予約システムなどは別途ご相談となります。契約期間や解約条件はお申し込み前に書面でご案内します。</p>
     </section>
 
     <section class="section faq" id="faq">
-      <div>
-        <div class="section-index">05</div>
-        <p class="eyebrow">FAQ</p>
-        <h2>よくある質問</h2>
-      </div>
+      <div class="faq-title"><div class="section-label"><span>05</span><p>FAQ</p></div><h2>よくある質問</h2><p>分からないことが残ったまま、契約をおすすめすることはありません。</p></div>
       <div class="faq-list">
-        <details>
-          <summary>パソコンが苦手でも大丈夫ですか？<span aria-hidden="true">＋</span></summary>
-          <p>はい。専門用語をなるべく使わず、確認していただきたい点を順番にご案内します。公開後の更新もお任せいただけます。</p>
-        </details>
-        <details>
-          <summary>写真や文章が用意できていません。<span aria-hidden="true">＋</span></summary>
-          <p>今あるInstagramや店内資料を参考に、必要な情報を一緒に整理できます。写真の新規撮影が必要な場合は別途ご相談となります。</p>
-        </details>
-        <details>
-          <summary>途中で解約できますか？<span aria-hidden="true">＋</span></summary>
-          <p>はい。最低利用期間を含む正式な条件は、ご契約前にわかりやすくご説明します。解約後のサイトやドメインの扱いも事前に取り決めます。</p>
-        </details>
-        <details>
-          <summary>ネットショップや予約機能も作れますか？<span aria-hidden="true">＋</span></summary>
-          <p>必要な機能を伺って個別に判断します。既存の予約サービスやInstagramを活用し、費用を抑える方法もご提案します。</p>
-        </details>
+        <details><summary>パソコンが苦手でも大丈夫ですか？<span>＋</span></summary><p>はい。管理画面を覚えていただく必要はありません。変更したい内容をメッセージでお送りいただければ、こちらで反映します。</p></details>
+        <details><summary>写真や文章がありません。<span>＋</span></summary><p>今あるSNSや店内資料を見ながら、掲載内容を一緒に整理します。新たな写真撮影が必要な場合は、対応方法と費用を事前にご相談します。</p></details>
+        <details><summary>月額料金でどこまで修正できますか？<span>＋</span></summary><p>文章・画像の差し替え、営業時間や営業日の変更などが対象です。ページの大量追加や全面リニューアルは、作業前に別途お見積もりします。</p></details>
+        <details><summary>途中で解約できますか？<span>＋</span></summary><p>はい。最低利用期間を含む正式な条件と、解約後のサイト・ドメインの扱いを契約前に明示します。</p></details>
       </div>
     </section>
 
     <section class="contact" id="contact">
-      <p class="eyebrow">LET'S TALK</p>
-      <h2>まずは、お店のことを<br />聞かせてください。</h2>
-      <p>相談だけでも大丈夫です。必要なもの、不要なものを整理しながら、お店に合う形を一緒に考えます。</p>
-      <a class="button button-light" href="https://github.com/tatekennn" target="_blank" rel="noreferrer">相談窓口を見る <span aria-hidden="true">↗</span></a>
-      <small>現在、正式なお問い合わせ窓口を準備中です。先行相談は上記プロフィールからご連絡ください。</small>
+      <div class="contact-inner">
+        <p class="eyebrow">YOUR WEB SUPPORT DESK</p>
+        <h2>Webのこと、<br />ひとりで悩まなくて大丈夫です。</h2>
+        <p>「まず何が必要か分からない」という段階からご相談いただけます。今のお店に必要なものだけを一緒に整理します。</p>
+        <a class="button button-lime" href="https://github.com/tatekennn" target="_blank" rel="noreferrer">先行相談の窓口を見る <span>↗</span></a>
+        <small>正式なメール・SNS窓口は準備中です。現在は運営者のGitHubプロフィールをご案内しています。</small>
+      </div>
     </section>
   </main>
 
   <footer>
-    <div class="footer-brand"><span class="brand-mark" aria-hidden="true">t</span><b>tateken web</b></div>
-    <p>南大沢・多摩エリアから、小さなお店の発信をお手伝いします。</p>
-    <div class="footer-bottom"><span>© <span data-year></span> tateken web</span><a href="#top">ページ上部へ ↑</a></div>
+    <div class="footer-main">
+      <div class="brand footer-brand"><span class="brand-symbol">係</span><span class="brand-name">おみせのWeb係<small>ホームページ制作・更新サポート</small></span></div>
+      <p>南大沢・多摩エリアから、地域のお店の発信を支えます。</p>
+    </div>
+    <div class="footer-bottom"><span>© <span data-year></span> おみせのWeb係</span><span>南大沢・多摩エリア</span><a href="#top">ページ上部へ ↑</a></div>
   </footer>
 </body>
 </html>

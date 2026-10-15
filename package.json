@@ -1,13 +1,11 @@
 {
-  "name": "tateken-web",
-  "version": "0.1.0",
+  "name": "omise-web-kakari",
+  "version": "0.2.0",
   "private": true,
-  "description": "南大沢・多摩エリアの小さなお店向けホームページ制作サービスサイト",
+  "description": "地域のお店向けホームページ制作・更新サポートサービス",
   "scripts": {
     "check": "node --check script.js && node scripts/check-site.mjs",
     "build": "node scripts/build.mjs"
   },
-  "engines": {
-    "node": ">=20"
-  }
+  "engines": { "node": ">=20" }
 }
