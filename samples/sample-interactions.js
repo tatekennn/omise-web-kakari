@@ -9,7 +9,7 @@ if (photoButtons.length) {
       <button class="lightbox-close" type="button" aria-label="拡大表示を閉じる">閉じる ×</button>
       <button class="lightbox-nav lightbox-prev" type="button" aria-label="前の写真">←</button>
       <figure>
-        <img src="" alt="" />
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" />
         <figcaption></figcaption>
       </figure>
       <button class="lightbox-nav lightbox-next" type="button" aria-label="次の写真">→</button>
@@ -80,4 +80,50 @@ if (photoButtons.length) {
     if (Math.abs(distance) < 45) return;
     showPhoto(currentIndex + (distance < 0 ? 1 : -1));
   }, { passive: true });
+}
+
+const reservationDialog = document.querySelector('[data-reservation-dialog]');
+
+if (reservationDialog) {
+  const openButtons = [...document.querySelectorAll('[data-reservation-open]')];
+  const closeButton = reservationDialog.querySelector('[data-reservation-close]');
+  const form = reservationDialog.querySelector('form');
+  const formView = reservationDialog.querySelector('[data-reservation-form]');
+  const completeView = reservationDialog.querySelector('[data-reservation-complete]');
+  let lastTrigger = null;
+
+  const openReservation = (trigger) => {
+    lastTrigger = trigger;
+    form.reset();
+    formView.hidden = false;
+    completeView.hidden = true;
+    document.body.classList.add('lightbox-open');
+    reservationDialog.showModal();
+    closeButton.focus();
+  };
+
+  const closeReservation = () => reservationDialog.close();
+
+  openButtons.forEach((button) => {
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+      openReservation(button);
+    });
+  });
+  closeButton.addEventListener('click', closeReservation);
+  reservationDialog.addEventListener('click', (event) => {
+    if (event.target === reservationDialog) closeReservation();
+  });
+  reservationDialog.addEventListener('close', () => {
+    document.body.classList.remove('lightbox-open');
+    lastTrigger?.focus();
+  });
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    formView.hidden = true;
+    completeView.hidden = false;
+    completeView.querySelector('button').focus();
+  });
+  completeView.querySelector('button').addEventListener('click', closeReservation);
 }

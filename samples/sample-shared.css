@@ -50,4 +50,30 @@ body.lightbox-open{overflow:hidden}
   .salon-copy h1 span{font-size:21px}.salon-concept h2{font-size:32px}
   .cafe-story h2,.bakery-about h2,.salon-staff-copy h2{font-size:clamp(30px,9vw,39px)}
 }
-@media(max-width:430px){.bread-grid{grid-template-columns:1fr}.sample-photo-pair img,.bakery-gallery img{height:330px}}
+/* Mobile section navigation and interactive reservation demo */
+.sample-mobile-nav{display:none}
+.salon-cta button[data-reservation-open]{margin-top:22px;padding:12px 24px;border:1px solid #fff;background:transparent;color:#fff;font:10px/1.4 "Avenir Next","Hiragino Sans",sans-serif;letter-spacing:.1em;cursor:pointer}
+.salon-cta button[data-reservation-open]:hover{background:#fff;color:var(--charcoal)}
+.reservation-dialog{width:min(560px,calc(100% - 28px));max-height:calc(100dvh - 28px);padding:0;border:0;background:var(--snow);color:var(--charcoal)}
+.reservation-dialog::backdrop{background:rgba(20,19,18,.78)}
+.reservation-panel{position:relative;padding:54px clamp(24px,6vw,48px) 40px}
+.reservation-close{position:absolute;top:14px;right:14px;min-height:44px;padding:8px 14px;border:1px solid #777;background:transparent;color:inherit;cursor:pointer}
+.reservation-dialog small{font-size:9px;letter-spacing:.2em;color:var(--rose)}
+.reservation-dialog h2{margin:12px 0 8px;font-family:"Yu Mincho",serif;font-size:32px;font-weight:400}
+.reservation-dialog p{margin:0 0 24px;color:#69645f;font-size:12px}
+.reservation-dialog form{display:grid;gap:16px}
+.reservation-dialog label{display:grid;gap:7px;font-size:11px;letter-spacing:.05em}
+.reservation-dialog input,.reservation-dialog select{width:100%;min-height:48px;padding:10px 12px;border:1px solid #aaa;background:#fff;color:#262523;font:16px/1.4 inherit}
+.reservation-submit,.reservation-complete button{min-height:48px;padding:12px 18px;border:0;background:var(--charcoal);color:#fff;cursor:pointer}
+.reservation-complete{padding:34px 0 16px;text-align:center}
+.reservation-complete button{margin-top:8px}
+.photo-open:focus-visible,.sample-mobile-nav a:focus-visible,.reservation-dialog button:focus-visible,.reservation-dialog input:focus-visible,.reservation-dialog select:focus-visible{outline:3px solid #dff078;outline-offset:3px}
+@media(max-width:760px){
+  .sample-mobile-nav{position:sticky;z-index:90;top:0;display:flex;overflow-x:auto;border-bottom:1px solid currentColor;background:inherit;scrollbar-width:none}
+  .sample-mobile-nav::-webkit-scrollbar{display:none}
+  .sample-mobile-nav a{display:grid;place-items:center;min-width:max-content;min-height:46px;padding:8px 16px;border-right:1px solid currentColor;color:inherit;text-decoration:none;font:700 10px/1.3 sans-serif;letter-spacing:.04em}
+  .salon .sample-mobile-nav{border-color:#ddd;background:rgba(247,246,242,.96)}
+  .cafe .sample-mobile-nav{border-color:rgba(74,52,38,.3);background:rgba(242,234,216,.96)}
+  .bakery .sample-mobile-nav{border-width:0 0 2px;background:var(--yellow)}
+}
+@media(max-width:430px){.bread-grid{grid-template-columns:1fr}.sample-photo-pair img,.bakery-gallery img{height:330px}.reservation-panel{padding:54px 20px 28px}}

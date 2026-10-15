@@ -11,17 +11,18 @@
 <body class="salon">
   <div class="sample-notice"><b>架空店舗の制作サンプルです</b><span>店舗名・人物・住所・価格はデモ用です</span><a href="../../#samples">サービスサイトへ戻る</a></div>
   <header class="salon-header"><a class="salon-logo" href="#top">nagi</a><nav><a href="#concept">CONCEPT</a><a href="#menu">MENU</a><a href="#staff">STAFF</a><a class="salon-reserve" href="#reserve">予約案内</a></nav></header>
+  <nav class="sample-mobile-nav" aria-label="ページ内メニュー"><a href="#concept">考え方</a><a href="#menu">料金</a><a href="#staff">担当者</a><a href="#reserve">予約</a></nav>
   <main id="top">
     <section class="salon-hero">
       <div class="salon-copy"><small>HAIR SALON / MINAMI-OSAWA</small><h1>nagi<span>自宅でも扱いやすい髪へ。</span></h1><p>南大沢の予約制ヘアサロンです。普段のお手入れや服装を伺い、無理なく続けられるスタイルを一緒に考えます。</p><a class="salon-inline-link" href="#reserve">予約方法を見る →</a></div>
-      <div class="salon-photo"><img src="../../assets/sample-salon.jpg" alt="自然光が入る落ち着いた美容室" /></div>
+      <div class="salon-photo"><img src="../../assets/sample-salon.jpg" alt="自然光が入る落ち着いた美容室" fetchpriority="high" /></div>
     </section>
 
     <section class="salon-concept" id="concept"><small>OUR APPROACH</small><h2>最初に、普段のことをお聞きします。</h2><p>朝のスタイリングにかけられる時間、髪のお悩み、よく着る服。カウンセリングで日常のことを伺ってから、その方に合う長さや形をご提案します。</p></section>
 
     <section class="salon-gallery sample-photo-pair" aria-label="施術とカウンセリングの写真">
-      <button class="photo-open" type="button" data-lightbox aria-label="施術の時間の写真を拡大する"><img src="../../assets/gallery/salon-service.jpg" alt="明るい美容室でスタイリストが髪を乾かしている様子" /><span class="photo-caption">施術の時間</span><span class="photo-zoom" aria-hidden="true">拡大 ↗</span></button>
-      <button class="photo-open" type="button" data-lightbox aria-label="仕上がりを確認する写真を拡大する"><img src="../../assets/gallery/salon-people.jpg" alt="鏡の前でスタイリストとお客さまが話している様子" /><span class="photo-caption">仕上がりを一緒に確認</span><span class="photo-zoom" aria-hidden="true">拡大 ↗</span></button>
+      <button class="photo-open" type="button" data-lightbox aria-label="施術の時間の写真を拡大する"><img src="../../assets/gallery/salon-service.jpg" alt="明るい美容室でスタイリストが髪を乾かしている様子" loading="lazy" decoding="async" /><span class="photo-caption">施術の時間</span><span class="photo-zoom" aria-hidden="true">拡大 ↗</span></button>
+      <button class="photo-open" type="button" data-lightbox aria-label="仕上がりを確認する写真を拡大する"><img src="../../assets/gallery/salon-people.jpg" alt="鏡の前でスタイリストとお客さまが話している様子" loading="lazy" decoding="async" /><span class="photo-caption">仕上がりを一緒に確認</span><span class="photo-zoom" aria-hidden="true">拡大 ↗</span></button>
     </section>
 
     <section class="salon-menu" id="menu">
@@ -34,8 +35,19 @@
       <div class="salon-staff-copy"><small>MEET YOUR STYLIST</small><h2>担当者が最初から最後まで対応します。</h2><p>ショートとボブ、髪の動きを生かした自然なスタイルを得意としています。施術中に気になることがあれば、遠慮なくお声がけください。</p><p>プロフィールはデザイン確認用の架空情報です。</p></div>
     </section>
 
-    <section class="salon-cta" id="reserve"><small>RESERVATION</small><h2>ご予約について</h2><p>Web予約またはお電話で承ります。空き状況は予約ページで確認できます（このボタンはデモ表示です）。</p><a href="#top">予約ページのデモ</a></section>
+    <section class="salon-cta" id="reserve"><small>RESERVATION</small><h2>ご予約について</h2><p>Web予約またはお電話で承ります。制作サンプルでは、予約画面の操作もお試しいただけます。</p><button type="button" data-reservation-open>予約ページのデモを開く</button></section>
   </main>
   <a class="sample-back" href="../../#samples">← サービスサイトへ戻る</a>
+  <dialog class="reservation-dialog" data-reservation-dialog aria-labelledby="reservation-title">
+    <div class="reservation-panel">
+      <button class="reservation-close" type="button" data-reservation-close aria-label="予約デモを閉じる">閉じる ×</button>
+      <div data-reservation-form>
+        <small>RESERVATION DEMO</small><h2 id="reservation-title">仮予約の入力</h2>
+        <p>送信内容は保存されません。予約フォームの操作見本です。</p>
+        <form><label>メニュー<select required><option value="">選択してください</option><option>カット</option><option>カット＋カラー</option><option>カット＋パーマ</option></select></label><label>希望日<input type="date" required /></label><label>お名前<input type="text" autocomplete="name" required /></label><button class="reservation-submit" type="submit">入力内容を確認する</button></form>
+      </div>
+      <div class="reservation-complete" data-reservation-complete hidden><small>DEMO COMPLETE</small><h2>入力できました。</h2><p>これは制作サンプルのため、予約内容は送信されていません。</p><button type="button">デモを閉じる</button></div>
+    </div>
+  </dialog>
 </body>
 </html>

@@ -3,4 +3,4 @@ dist/
 .DS_Store
 site-preview*.png
 qa-*.png
-final-production.png
+final-production*.png

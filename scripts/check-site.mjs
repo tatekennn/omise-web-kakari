@@ -27,6 +27,18 @@ for (const page of pages) {
     if (!/\balt="[^"]+"/.test(image[0])) throw new Error(`${page}: image is missing descriptive alt text`);
   }
 }
+const samplePages = pages.slice(1);
+for (const page of samplePages) {
+  const html = await readFile(page, 'utf8');
+  if (!html.includes('sample-interactions.js')) throw new Error(`${page}: shared interactions script is missing`);
+  if (!html.includes('sample-mobile-nav')) throw new Error(`${page}: mobile section navigation is missing`);
+  if (!html.includes('data-lightbox')) throw new Error(`${page}: tappable photo gallery is missing`);
+}
+const salon = await readFile('samples/salon/index.html', 'utf8');
+for (const needle of ['data-reservation-open', 'data-reservation-dialog', 'data-reservation-complete']) {
+  if (!salon.includes(needle)) throw new Error(`samples/salon/index.html: reservation demo is incomplete (${needle})`);
+}
+
 const main = await readFile('index.html', 'utf8');
 for (const [needle, label] of [['lang="ja"','Japanese declaration'],['name="description"','description'],['架空','sample disclosure'],['参考料金','pricing disclosure'],['おみせのWeb係','service brand']]) {
   if (!main.includes(needle)) throw new Error(`index.html: missing ${label}`);
