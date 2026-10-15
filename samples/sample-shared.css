@@ -77,3 +77,20 @@ body.lightbox-open{overflow:hidden}
   .bakery .sample-mobile-nav{border-width:0 0 2px;background:var(--yellow)}
 }
 @media(max-width:430px){.bread-grid{grid-template-columns:1fr}.sample-photo-pair img,.bakery-gallery img{height:330px}.reservation-panel{padding:54px 20px 28px}}
+
+/* Accessibility, readability, and finished sample details */
+.sample-notice{min-height:44px;font-size:12px}.sample-back{min-height:44px;font-size:12px}
+.cafe-copy p,.cafe-story div>p,.cafe-menu-grid p,.cafe-access dl{font-size:14px}.cafe-menu-grid p{color:#57473d}
+.salon-copy p,.salon-concept p,.salon-staff-copy p,.salon-cta p{font-size:14px}.salon-concept small{color:#795f59;font-size:10px}.salon-cta button[data-reservation-open]{font-size:13px}
+.bakery-ticker{font-size:11px}.bakery-title span{font-size:11px}.bakery-access p{font-size:14px}
+.photo-caption{font-size:12px}.photo-zoom{font-size:11px}
+.salon-portrait{position:relative;overflow:hidden}.salon-portrait img{position:absolute;inset:0;height:100%;object-fit:cover;filter:saturate(.45) brightness(.72)}.salon-portrait strong{position:relative;z-index:1;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.4)}
+.bread-grid article{overflow:hidden;padding:0}.bread-grid article>img{width:100%;height:160px;border-bottom:2px solid var(--ink);object-fit:cover}.bread-grid article>div{padding:18px}
+@media(max-width:760px){
+  .photo-zoom{display:block;top:12px;right:12px;opacity:1;transform:none}
+  .sample-back{position:static;width:max-content;margin:24px auto}
+  .sample-notice a{display:inline-flex;align-items:center;min-height:44px;margin-left:8px}
+  .cafe-copy p,.cafe-story div>p,.cafe-menu-grid p,.cafe-access dl,.salon-copy p,.salon-concept p,.salon-staff-copy p,.salon-cta p,.bakery-access p{font-size:15px}
+  .bakery-ticker{font-size:12px}.photo-caption{font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sample-photo-pair img,.photo-zoom,.sample-back{transition:none!important}}

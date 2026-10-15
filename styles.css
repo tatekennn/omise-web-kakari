@@ -39,3 +39,17 @@ p,li,dd{text-wrap:pretty}
   .plan-price{justify-content:flex-start}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition-duration:.01ms!important}}
+
+/* Conversion path and mobile readability */
+.section-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;max-width:var(--max);margin:42px auto 0;padding:24px 40px;border:1px solid rgba(255,255,255,.22)}
+.section-cta p{margin:0;font-family:var(--serif);font-size:18px}
+.pricing-cta{margin:28px 0 0 18%;border-color:var(--line)}
+.brand-name small{font-size:9px}.hero-assurance{font-size:11px}.section-label{font-size:11px}.service-number,.service-title small{font-size:10px}.service-rail ul{font-size:13px}.sample-info>div>span,.image-site-title small{font-size:10px}.sample-info>a{font-size:13px}.sample-disclosure{font-size:11px}.approach-grid li>span{font-size:11px}.plans ul{font-size:13px}.plan-name p,.fit,.price-caution,.contact small,.footer-bottom{font-size:11px}.plan-price span{font-size:11px}.faq-title>p,details p{font-size:14px}.footer-main>p{font-size:13px}
+@media(max-width:650px){
+  .sample-item{padding:42px 0}.sample-image,.sample-image img{min-height:300px;height:300px}
+  .section-cta{display:block;margin:32px 22px 0;padding:22px}.section-cta p{margin-bottom:16px;font-size:16px}.section-cta .button{width:100%}
+  .pricing-cta{margin:26px 0 0}
+  .hero-assurance,.service-rail ul,.sample-info>a,.plans ul{font-size:14px}
+  .section-label,.sample-disclosure,.price-caution,.contact small,.footer-bottom{font-size:12px}
+  .plan-name p,.fit,.plan-price span{font-size:13px}
+}

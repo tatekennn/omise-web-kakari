@@ -62,7 +62,7 @@ if (photoButtons.length) {
   previousButton.addEventListener('click', () => showPhoto(currentIndex - 1));
   nextButton.addEventListener('click', () => showPhoto(currentIndex + 1));
   dialog.addEventListener('click', (event) => {
-    if (event.target === dialog) closePhoto();
+    if (event.target === dialog || event.target === dialog.querySelector('.lightbox-panel')) closePhoto();
   });
   dialog.addEventListener('close', () => {
     document.body.classList.remove('lightbox-open');
