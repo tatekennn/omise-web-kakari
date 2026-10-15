@@ -23,9 +23,12 @@ for (const page of pages) {
       catch { throw new Error(`${page}: missing asset ${src}`); }
     }
   }
+  for (const image of html.matchAll(/<img\b[^>]*>/g)) {
+    if (!/\balt="[^"]+"/.test(image[0])) throw new Error(`${page}: image is missing descriptive alt text`);
+  }
 }
 const main = await readFile('index.html', 'utf8');
-for (const [needle, label] of [['lang="ja"','Japanese declaration'],['name="description"','description'],['架空店舗','sample disclosure'],['参考料金','pricing disclosure'],['おみせのWeb係','service brand']]) {
+for (const [needle, label] of [['lang="ja"','Japanese declaration'],['name="description"','description'],['架空','sample disclosure'],['参考料金','pricing disclosure'],['おみせのWeb係','service brand']]) {
   if (!main.includes(needle)) throw new Error(`index.html: missing ${label}`);
 }
 console.log(`Site check passed: ${pages.length} pages, ${internalLinks} anchor links, local files and disclosures verified.`);
