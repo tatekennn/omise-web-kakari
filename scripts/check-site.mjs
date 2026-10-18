@@ -1,7 +1,7 @@
 import { readFile, access } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 
-const pages = ['index.html', 'samples/cafe/index.html', 'samples/salon/index.html', 'samples/bakery/index.html'];
+const pages = ['index.html', 'samples/cafe/index.html', 'samples/salon/index.html', 'samples/bakery/index.html', 'samples/hachi/index.html'];
 let internalLinks = 0;
 for (const page of pages) {
   const html = await readFile(page, 'utf8');
